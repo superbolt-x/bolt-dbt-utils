@@ -1,6 +1,6 @@
 {%- macro get_date_parts(date_column) -%}
 
-{%- for date_part in ['week', 'month','quarter','year'] %}
+{%- for date_part in ['day','week','month','quarter','year'] %}
     {%- if date_part == 'week' -%}
     {%- if var('week_start')|lower in ('mon','monday') %}
     DATE_TRUNC('{{date_part}}', {{date_column}})::date as {{date_part}}
