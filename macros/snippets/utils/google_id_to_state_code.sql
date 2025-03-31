@@ -56,7 +56,7 @@
 
 CASE 
     {% for state_full, state_abbr in state_id_to_code.items() %}
-    WHEN {{ state_id }} = '{{ state_full }}' THEN '{{ state_abbr }}'
+    WHEN {{ state_id }}::varchar = '{{ state_full }}' THEN '{{ state_abbr }}'
     {% endfor %}
     ELSE 'UN'
 END
