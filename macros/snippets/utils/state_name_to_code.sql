@@ -54,6 +54,6 @@
     "unknown": "UN"
 } %}
 
-{{ state_code.get(state_name|lower, 'UN') }}
+'{{ state_code.get(state_name|lower, 'UN') }}'
   
 {%- endmacro -%}

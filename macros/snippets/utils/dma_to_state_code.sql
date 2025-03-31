@@ -215,6 +215,6 @@
 
 } %}
 
-{{ dma_to_code.get(state_dma|string, 'UN') }}
+'{{ dma_to_code.get(state_dma|string, 'UN') }}'
   
 {%- endmacro -%}
