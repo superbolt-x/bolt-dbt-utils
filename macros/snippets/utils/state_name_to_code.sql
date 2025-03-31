@@ -51,7 +51,7 @@
     "west virginia": "WV",
     "wisconsin": "WI",
     "wyoming": "WY",
-    "unknown": "UK"
+    "unknown": "UN"
 } %}
 
 CASE 
