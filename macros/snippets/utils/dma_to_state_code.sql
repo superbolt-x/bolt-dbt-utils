@@ -215,11 +215,6 @@
 
 } %}
 
-CASE 
-    {% for state_full, state_abbr in dma_to_code.items() %}
-    WHEN {{ state_dma }}::varchar = '{{ state_full }}' THEN '{{ state_abbr }}'
-    {% endfor %}
-    ELSE 'UN'
-END
+{{ dma_to_code.get(state_dma|string, 'UN') }}
   
 {%- endmacro -%}
