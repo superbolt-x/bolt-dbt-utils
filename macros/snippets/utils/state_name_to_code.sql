@@ -50,7 +50,8 @@
     "washington": "WA",
     "west virginia": "WV",
     "wisconsin": "WI",
-    "wyoming": "WY"
+    "wyoming": "WY",
+    "unknown": "UK"
 } %}
 
 CASE 
