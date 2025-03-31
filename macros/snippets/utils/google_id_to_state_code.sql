@@ -1,6 +1,6 @@
 {%- macro google_id_to_state_code(state_id) -%}
 
-{%- set state_id = {
+{%- set state_id_to_code = {
     '21132': 'AK',
     '21133': 'AL',
     '21135': 'AR',
@@ -55,7 +55,7 @@
 } %}
 
 CASE 
-    {% for state_full, state_abbr in state_id.items() %}
+    {% for state_full, state_abbr in state_id_to_code.items() %}
     WHEN {{ state_id }} = '{{ state_full }}' THEN '{{ state_abbr }}'
     {% endfor %}
     ELSE 'UN'
