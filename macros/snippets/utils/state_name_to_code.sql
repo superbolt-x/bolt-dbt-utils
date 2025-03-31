@@ -54,11 +54,6 @@
     "unknown": "UN"
 } %}
 
-CASE 
-    {% for state_full, state_abbr in state_code.items() %}
-    WHEN LOWER(TRIM({{ state_name }})) = '{{ state_full }}' THEN '{{ state_abbr }}'
-    {% endfor %}
-    ELSE {{ state_name }}
-END
+{{ state_code.get(state_name|lower, 'UN') }}
   
 {%- endmacro -%}
