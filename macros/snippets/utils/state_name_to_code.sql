@@ -1,4 +1,4 @@
-{%- macro state_name_to_code(state_name) -%}
+{%- macro enhanced_state_name_to_code(state_name) -%}
 
 {%- set state_code = {
     'alabama': 'AL',
@@ -54,6 +54,7 @@
     "unknown": "UN"
 } %}
 
-'{{ state_code.get(state_name|lower, 'UN') }}'
+{%- set cleaned_name = state_name|trim|lower -%}
+'{{ state_code.get(cleaned_name, "UN") }}'
   
 {%- endmacro -%}
