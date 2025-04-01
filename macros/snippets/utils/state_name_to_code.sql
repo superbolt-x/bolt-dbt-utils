@@ -1,4 +1,4 @@
-{%- macro enhanced_state_name_to_code(state_name) -%}
+{%- macro state_name_to_code(state_name) -%}
 
 {%- set state_code = {
     'alabama': 'AL',
