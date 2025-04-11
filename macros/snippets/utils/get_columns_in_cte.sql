@@ -1,6 +1,6 @@
 {% macro get_columns_in_cte(cte_name) %}
     {% set query %}
-        SELECT * FROM {{ cte_name }}
+        SELECT * FROM cte_name
         LIMIT 0
     {% endset %}
 
